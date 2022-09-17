@@ -6,7 +6,7 @@
 #include "learnopengl/stb_image.h"
 #include "learnopengl/shader_s.h"
 #include "learnopengl/camera.h"
-#include "model.h"
+#include "learnopengl/model.h"
 
 // 矩阵变换运算库
 #include <glm/glm.hpp>
@@ -113,7 +113,7 @@ int main()
         // 模型矩阵
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // 把它移动，让它处于场景的中心
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// 对我们的场景来说有点太大了，把它缩小一点
+        model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));	    // 对我们的场景来说有点太大了，把它缩小一点
         ourShader.setMat4("model", model);
         ourModel.Draw(ourShader);
 
